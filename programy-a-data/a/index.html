@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programové a datové soubory</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <main>
+        <h2>1. Programové a datové soubory</h2>
+        <p><strong>Soubor</strong> <em>(file)</em> je množina souvisejících dat uložených na diskové jednotce. Název
+            souboru je obvykle tvořen jménem
+            (ve Windows až 254 znaků) a příponou, která naznačuje <strong>typ souboru</strong>. K dalším vlastnostem
+            souboru patří jeho
+            velikost, autor (vlastník), datum vytvoření, datum změny, atributy, přístupová práva apod.
+        </p>
+        <p>K přehlednější
+            práci se
+            soubory slouží systém <strong>adresářů</strong> či složek <em>(directories, folders)</em>. Adresáře tvoří na
+            disku typicky
+            hierarchickou
+            strukturu (tree - strom); základem je tzv. <strong>kořenový adresář</strong> (<em>root</em>) označený
+            symbolem „/“ (Unix, Linux),
+            nebo „\“
+            (Windows). Každý adresář může obsahovat soubory i <strong>podadresáře</strong> (<em>subdirectories</em>).
+        </p>
+        <p><strong>Cesta</strong> (<em>path</em>) vyjadřuje umístění souboru vždy směrem od nejvyššího
+            adresáře: <em>C:\XAMPP\mysql\bin\mysql.exe</em>
+            Pro operace se soubory využíváme
+            někdy <strong>zástupné znaky</strong> (<em>wildcards</em>):</p>
+        <ul>
+            <li> symbol <strong>*</strong> nahrazuje v názvu libovolný počet znaků (např. *.*);</li>
+            <li>symbol <strong>?</strong> nahrazuje jeden libovolný znak (např. s?s.txt);</li>
+        </ul>
+        <p><strong>Programové soubory</strong> obsahují instrukce, podle nichž procesor ve spolupráci s
+            dalšími
+            hardwarovými komponentami plní konkrétní úlohy. Mohou být uloženy v již zkompilované binární podobě
+            (nejčastěji ve
+            <strong>strojovém kódu</strong> pro danou platformu), nebo ve <strong>zdrojovém kódu</strong>, obsahujícím
+            příkazy určitého programovacího
+            jazyka.
+            Mezi programové soubory můžeme zařadit také <strong>skripty</strong>, soubory instrukcí v textové podobě,
+            které ke svému
+            spuštění
+            vyžadují speciální program - <strong>interpret.</strong>
+        </p>
+        <p>Větší programy jsou tvořeny <strong>programovými knihovnami</strong> <em>(runtime libraries)</em>,
+            speciálními soubory s připravenými funkcemi, které programy využívají pro svůj běh. Ve Windows to jsou např.
+            soubory <em>DRV</em> a <em>SYS</em>(obsahující zejména ovladače čili drivery, ale i systémové funkce), nebo
+            také <abbr title="(dynamic linking library - dynamicky linkované knihovny)"><strong>DLL</strong></abbr>,
+            které mohou být podle potřeby za běhu (dynamicky) připojeny k jednomu i více programům.
+        </p>
+        <p>Některé soubory s tzv. <strong>spustitelnou příponou</strong> (např. .exe a .com ve Windows, .sh v Linuxu)
+            slouží
+            ke spuštění programu - aktivaci procesu v rámci operačního systému. <strong>Za rezidentní programy</strong>
+            (služby, démony)
+            označujeme ty procesy, které jsou spuštěny automaticky po iniciaci operačního systému (např. antivirové
+            programy).
+        </p>
+        <p>
+            <strong>Datové soubory</strong> obsahují data různého charakteru (číselné, textové, grafické, zvukové
+            údaje). K jejich zpracování se
+            používají konkrétní programy, a proto jsou často přípony těchto datových souborů asociovány (propojeny) s
+            určitou aplikací (např. DOCX s programem MS Word, nebo XLSX s programem MS Excel).
+        </p>
+        <figure>
+            <img src="../img/a/exe.jpg" alt="ikona souboru s příponou .exe">
+            <img src="../img/a/folder.jpg" alt="ikona složky ve Windows">
+            <img sizes="100px" src="../img/a/sh.jpg" alt="náhodná ikona souboru .sh v Linuxu">
+        </figure>
+        <hr>
+        <p>&copy;Samuel Vaňuš, IT2028 15.1.2021 SŠPU Opava</p>
+        <div class="id_container">
+            <p>-</p>
+            <div>
+                <a href="../index.html">home</a>
+            </div>
+            <div">
+                <a href="../b/index.html">2.Operační systémy</a>
+        </div>
+        </div>
+    </main>
+</body>
+
+</html>

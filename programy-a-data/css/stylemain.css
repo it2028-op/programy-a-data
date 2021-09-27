@@ -1,0 +1,42 @@
+h1{
+    color: lawngreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: lawngreen;
+}
+a {
+    color: lawngreen;
+}
+main {
+    background-color: black;
+    margin: 75px;
+    padding: 20px;
+    border: 10px solid lawngreen ;
+}
+li{
+    color: whitesmoke;
+    text-align: center;
+}
+p{
+    color: whitesmoke;
+    text-align: center;
+}
+body{
+    background-image: url("../img/dataimg.jpg");
+}
+.flex-container{
+    display: flex;
+    background-color: black;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container > div {
+ width: 30%;
+}

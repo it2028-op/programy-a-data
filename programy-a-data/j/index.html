@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.Zálohování programů a dat</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <main>
+        <h2>10.Zálohování programů a dat</h2>
+        <p> Záloha nebo záložní kopie (anglicky backup) je kopie dat uložená na jiném datovém nosiči (nebo i místě).
+            Záložní
+            data jsou využívána v případě ztráty, poškození nebo jiné potřeby práce s daty uloženými v minulosti.
+            Zálohování
+            probíhá nepravidelně (např. v domácnostech), nebo pravidelně podle rozvrhu (např. ve firmách). Používají se
+            různé
+            strategie zálohování; volba správné strategie závisí na tom, zde je po-třeba se zálohami pracovat velmi
+            často, nebo
+            je naopak požadována maximální délka archivace zálohovaných dat.</p>
+            <h3>Prostředky zálohování</h3>
+            <ul>
+            <li>Specializovaný program (např. ve Windows je součástí instalace).</li>
+           <li>Specializovaná zařízení (hardware), která pracují automatizovaně.</li>
+           <li>Komplexní zálohovací systémy umožňující efektivně zálohovat mnoho počítačů propojených počítačovou sítí, nebo naopak
+            na mnoho počítačů propojených v síti data zálohovat (tzv. úložný cluster).</li>
+        </ul>
+            <h3>Typy záloh</h3>
+            <p><strong>Nestrukturovaná</strong> Úložištěm může
+            být větší
+            množství disket, CD, DVD medií s minimem informací o záloze; nejjednodušší, ale nevhodná pro větší
+            firmy.</p> 
+           <p><strong>Úplná + inkrementální</strong> Cílem je vytvořit více kopií zálohovaných dat; poprvé je provedena úplná záloha všech dat;
+            poté je prováděna tzv. inkrementální záloha (tj. přírůstková, ukládány jsou pouze soubory, které se změnily od
+            předešlé úplné nebo inkrementální zálohy); při obnově je nutné použít první úplnou i všechny následující
+            inkrementální zálohy (náročné na paměťový prostor).Úplná + rozdílová. Rozdíl oproti předešlé metodě je v tom, že po úplné
+            záloze každá částečná záloha zachytí všechny soubory vytvořené nebo změněné od vytvoření úplné zálohy, třebaže
+            některé už jsou obsaženy v předešlé částečné záloze; výhodou je, že obnova zahrnuje obnovení pouze poslední úplné
+            zálohy a její překrytí poslední rozdílovou zálohou.</p>
+            <p><strong>Zrcadlová + reverzně přírůstková</strong> Tento model obsahuje zrcadlo
+            reflektující stav systému po poslední záloze a historii přírůstkových záloh; výhodou je, že máme neustále k dispozici
+            aktuální plnou zálohu a ukládáme pouze historii změn; metoda se nehodí pro přenosná media, protože každá záloha musí
+            být provedena pomocí srovnání se zrcadlem.</p>
+           <p><strong>Průběžná ochrana dat (žurnálování)</strong> Metoda využívá místo plánovaných
+            periodických záloh okamžitý zápis každé změny do žurnálu změn (logu); provádí se ukládáním bytů nebo celých
+            bloků dat místo ukládání celých změněných souborů; průběžný záznam změn v žurnálu umožňuje získat obraz dat v
+            minulosti; naproti tomu prosté zrcadlení dat na druhý disk (např. RAID 1) stav v minulosti nezachycuje.</p>
+            <h3>Zásady zálohování</h3>
+            <ul>
+            <li>Postupy zálohování volíme v závislosti na konkrétní situaci (jak často dochází ke změně dat, jak jsou data cenná ...).</li>
+            <li>Provádíme kontrolu záloh – umožnuje většina programů (např. pou-žití kontrolního součtu).</li>
+            <li>Pečlivě popisujeme zálohy (co obsahují, datum vytvoření).</li>
+            <li>Pořizujeme zálohy z instalačních médií; originální média by měla být ihned po pořízení kopií uložena na bezpečném místě (včetně insta-lačních hesel a čísel!), vlastní instalace probíhá z pořízených kopií.</li>
+            <li>Ukládáme zálohy na fyzicky různá místa – důležité zálohy by neměly být uloženy u počítače (požár, krádež...).▫Snažíme se zajistit důvěrnost dat (fyzicky, či aspoň zaheslováním zálohy).</li>
+            <li>Volíme vhodná zálohovací média (CD, DVD, Flash...); médium vo-líme podle rychlosti zálohování (čtení), pořizovací a provozní ceny, spolehlivosti média, spolehlivost obnovení, doby uchovávání dat, kompatibility...</li>
+        </ul>
+           <h3>Možnosti zálohování</h3>
+           <p><strong>Záloha adresářů a souborů</strong> Provádíme ji různými způsoby - prostým kopírováním obsahu plánovanou
+            synchronizací, zálohováním adresáře s komprimací obsahu. Pro běžnou zálohu můžeme použít řadu archivačních
+            programů - např. WinZip, WinRar, 7zip a jiné.</p>
+            <p><strong>Záloha oddílu</strong> Záloha obsahu celého diskového oddílu včetně instalovaného
+            operačního systému (pokud jej oddíl obsahuje), instalovaných aplikací a veškerých dat; na rozdíl od
+            souborové zálohy obsahuje také zaváděcí záznam a skryté části operačního systému, takže při obnově zálohy systémového oddílu
+            je operační systém plně funkční a schopný bootovat (za předpokladu, že byl funkční v době tvorby zálohy).</p>
+            <p><strong>Záloha disku</strong> Záloha obsahu celého disku včetně rozdělení disku na jednotlivé oddíly (např. Clonezilla).</p>
+            <p><strong>Záloha systému</strong> Záloha  funkčního stavu systému, která by umožňuje obnovení systému do původní podoby; je možné použít buď program
+            nabízený samotným OS, nebo některý ze specializovaných programů (Acronis). </p>
+            <figure>
+                <img src="../img/j/clonezilla.jpg" alt="Clonezilla">
+                <img src="../img/j/Acronis.jpg" alt="Acronis">
+            </figure>
+        <hr>
+        <p>&copy;Samuel Vaňuš, IT2028 15.1.2021 SŠPU Opava</p>
+        <div class="id_container">
+            <div>
+                <a href="../i/index.html">9.Cloudová řešení</a>
+            </div>
+            <div>
+                <a href="../index.html">home</a>
+            </div>
+            <p>-</p>
+    </main>
+</body>
+
+</html>

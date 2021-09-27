@@ -1,0 +1,49 @@
+h1{
+    color: lawngreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: lawngreen;
+    font-size: 47px;
+}
+h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+a {
+    color: lawngreen;
+}
+main {
+    background-color: black;
+    margin: 75px;
+    padding: 20px;
+    border: 10px solid lawngreen ;
+    padding-top: 0px;
+}
+li{
+    color: whitesmoke;
+}
+p{
+    color: whitesmoke;
+}
+body{
+    background-image: url("../img/dataimg.jpg");
+}
+.id_container{
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.id_container > div{
+    margin: 10px;
+    padding: 20px;
+}
